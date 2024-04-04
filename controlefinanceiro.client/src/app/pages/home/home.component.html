@@ -1,0 +1,62 @@
+<p>home works!</p>
+
+<div class="despesa-box">
+  <button>Cadastrar Nova Despesa</button>
+  <div class="input-box">
+    <label for="">Procurar</label>
+    <input type="text" placeholder="Despesa a procurar">
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Paga?</th>
+      <th>Despesa</th>
+      <th>Descrição</th>
+      <th>Valor</th>
+      <th>Vencimento</th>
+      <th>Recorrente</th>
+      <th>Categoria</th>
+      <th>Pagamento</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let despesa of despesas">
+    <tr>
+      <td>
+        <div *ngIf="despesa.paga==true">
+          <img src="../../../assets/images/Verificado.png" alt="" style="height: 20px;width: 20px;">
+        </div>
+        <div *ngIf="despesa.paga==false">
+          <img src="../../../assets/images/Cancelado.png" alt="" style="height: 20px;width: 20px;">
+        </div>
+      </td>
+      <td>{{despesa.nome}}</td>
+      <td>{{despesa.descricao}}</td>
+      <td>{{(despesa.valor | currency: 'BRL')}}</td>
+      <td>{{despesa.vencimento}}</td>
+      <td>
+        <div *ngIf="despesa.repetirMensal==true;else naoRecorrente">
+          <img src="../../../assets/images/reuso.png" alt="" style="height: 20px;width: 20px;">
+        </div>
+        <ng-template #naoRecorrente>
+          <img src="../../../assets/images/NaoRecorrente.png" alt="" style="height: 20px;width: 20px;">
+        </ng-template>
+
+
+
+      </td>
+      <td>{{despesa.tipoCategoriaId}}</td>
+      <td>{{despesa.tipoPagamentoId}}</td>
+      <td>
+        <button>EDITAR</button>
+        <button>DETALHES</button>
+      </td>
+      <td>
+        <button>EXCLUIR</button>
+      </td>
+
+    </tr>
+  </tbody>
+
+</table>
