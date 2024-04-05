@@ -1,4 +1,4 @@
-export interface despesas
+export interface Despesas
 {
   id?:number,
   nome: string,
@@ -10,5 +10,6 @@ export interface despesas
   usuarioId: number,
   tipoCategoriaId: number,
   tipoPagamentoId: number,
-  dataCadastro: string
+  dataCadastro: string,
+  dataAlteracao: string
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { despesas } from 'src/app/models/despesas';
+import { Despesas } from 'src/app/models/Despesas';
 import { DespesasService } from 'src/app/services/despesas.service';
 
 @Component({
@@ -13,8 +13,8 @@ import { DespesasService } from 'src/app/services/despesas.service';
 
 export class HomeComponent implements OnInit {
 
-  despesas:despesas[] = [];
-  despesasGeral: despesas[] = [];
+  despesas:Despesas[] = [];
+  despesasGeral: Despesas[] = [];
 
   constructor(private despesasService:DespesasService)
   {
@@ -39,9 +39,18 @@ export class HomeComponent implements OnInit {
       this.despesasGeral = dadosApi;
 
     });
-
-
   }
 
+
+  search(event : Event){
+    const target = event.target as HTMLInputElement;
+    const value = target.value.toLowerCase();
+        //console.log(value)
+
+  this.despesas = this.despesasGeral.filter(despesa => {
+    return despesa.nome.toLowerCase().includes(value);
+  })
+
+  }
 }
 

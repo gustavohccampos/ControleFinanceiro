@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { despesas } from '../models/despesas';
-import { response } from '../models/response';
+import { Despesas } from '../models/Despesas';
+
 
 
 @Injectable({
@@ -15,11 +15,14 @@ export class DespesasService {
 
   constructor(private http:HttpClient) { }
 
-  GetDespesas() : Observable<despesas[]>
+  GetDespesas() : Observable<Despesas[]>
   {
-      return this.http.get<despesas[]>(this.apiUrl)
+      return this.http.get<Despesas[]>(this.apiUrl)
   }
 
+  PostDespesa(despesa: Despesas) : Observable<Despesas[]> {
+    return this.http.post<Despesas[]>(`${this.apiUrl}`, despesa);
+  }
 
 
 }

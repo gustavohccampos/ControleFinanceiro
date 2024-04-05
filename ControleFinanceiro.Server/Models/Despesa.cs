@@ -36,8 +36,8 @@ namespace ControleFinanceiro.Server.Models
         public TipoPagamento? TipoPagamento { get; set; }
 
 
-
         public DateTime DataCadastro { get; set; } = DateTime.Now;
+        public DateTime DataAlteracao { get; set; } = DateTime.Now;
 
     }
 }

@@ -1,0 +1,70 @@
+<h3>Cadastro de uma Nova Despesa</h3>
+
+<form [formGroup]="despesaForm" (ngSubmit)="submit()" #forDit="ngForm">
+
+  <div class="input_box">
+    <label for="">Nome</label>
+    <input type="text" formControlName="nome" placeholder="Insira o nome da Despesa!" required>
+  </div>
+
+  <div class="input_box">
+    <label for="">Descrição</label>
+    <input type="text" formControlName="descricao" placeholder="Descrição da Despesa">
+  </div>
+
+  <div class="input_box">
+    <label for="">Valor</label>
+    <input type="text" formControlName="valor" placeholder="Valor" required>
+  </div>
+
+  <div class="input_box">
+    <label for="">Vencimento</label>
+    <input type="text" formControlName="vencimento" placeholder="">
+  </div>
+
+  <div class="input_box">
+    <label for="">Recorrente</label>
+    <input type="checkbox" formControlName="repetirMensal" placeholder="Recorrente">
+  </div>
+
+  <div class="input_box">
+    <label for="">Paga</label>
+    <input type="checkbox" formControlName="paga" placeholder="">
+  </div>
+
+  <div class="input_box">
+    <label for="">UsuarioID</label>
+    <input type="text" formControlName="usuarioId" placeholder="">
+  </div>
+
+  <div class="input_box">
+    <label for="">TipoCategoriaId</label>
+    <select formControlName="tipoCategoriaId" id="tipoCategoriaId" required>
+      <option value="2">teste</option>
+      <option value="2">teste2</option>
+    </select>
+  </div>
+
+  <div class="input_box">
+    <label for="">TipoPagamentoId</label>
+    <select formControlName="tipoPagamentoId" id="tipoPagamentoId" required>
+      <option value="2">teste</option>
+      <option value="2">teste2</option>
+    </select>
+  </div>
+
+  <div class="input_box">
+    <label for="">DataCadastro</label>
+    <input type="text" formControlName="dataCadastro" placeholder="">
+  </div>
+  <div class="input_box">
+    <label for="">DataAlteracao</label>
+    <input type="text" formControlName="dataAlteracao" placeholder="">
+  </div>
+
+  <div class="btn-box">
+    <button type="submit">Cadastrar</button>
+    <button>Voltar</button>
+  </div>
+
+</form>

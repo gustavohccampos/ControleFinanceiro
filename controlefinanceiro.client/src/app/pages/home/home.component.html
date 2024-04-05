@@ -1,10 +1,10 @@
 <p>home works!</p>
 
 <div class="despesa-box">
-  <button>Cadastrar Nova Despesa</button>
+  <button routerLink="cadastroDespesa"> Cadastrar Nova Despesa</button>
   <div class="input-box">
     <label for="">Procurar</label>
-    <input type="text" placeholder="Despesa a procurar">
+    <input type="text" placeholder="Despesa a procurar" (input)="search($event)">
   </div>
 </div>
 
@@ -19,6 +19,7 @@
       <th>Recorrente</th>
       <th>Categoria</th>
       <th>Pagamento</th>
+      <th>DataCadastro</th>
     </tr>
   </thead>
   <tbody *ngFor="let despesa of despesas">
@@ -48,6 +49,7 @@
       </td>
       <td>{{despesa.tipoCategoriaId}}</td>
       <td>{{despesa.tipoPagamentoId}}</td>
+      <td>{{despesa.dataCadastro}}</td>
       <td>
         <button>EDITAR</button>
         <button>DETALHES</button>
