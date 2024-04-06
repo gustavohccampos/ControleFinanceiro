@@ -1,4 +1,3 @@
-<p>home works!</p>
 
 <div class="despesa-box">
   <button routerLink="cadastroDespesa"> Cadastrar Nova Despesa</button>
@@ -34,7 +33,7 @@
       </td>
       <td>{{despesa.nome}}</td>
       <td>{{despesa.descricao}}</td>
-      <td>{{(despesa.valor | currency: 'BRL')}}</td>
+      <td>{{(despesa.valor | currency)}}</td>
       <td>{{despesa.vencimento}}</td>
       <td>
         <div *ngIf="despesa.repetirMensal==true;else naoRecorrente">
@@ -51,7 +50,7 @@
       <td>{{despesa.tipoPagamentoId}}</td>
       <td>{{despesa.dataCadastro}}</td>
       <td>
-        <button>EDITAR</button>
+        <button class="btnEditar">EDITAR</button>
         <button>DETALHES</button>
       </td>
       <td>

@@ -1,0 +1,91 @@
+/* Estilizando o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+
+}
+
+/* Estilizando o cabeçalho */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+/* Estilizando o título */
+h1 {
+  margin: 0;
+}
+
+/* Estilizando a área de exibição dos dados */
+.data-display {
+  margin: 20px;
+}
+
+.despesa-box button{
+  margin-bottom: 10px;
+}
+
+.despesa-box input{
+  margin-bottom: 10px;
+  width: 200px;
+  height: 20px;
+  font-weight: bold;
+}
+
+/* Estilizando a tabela */
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 1px solid #000000;
+}
+
+/* Estilizando o cabeçalho da tabela */
+th, td {
+  padding: 3px;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+}
+tr{
+  border-bottom: 1px solid #000000;
+}
+
+/* Estilizando as linhas alternadas da tabela */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #000000;
+}
+
+/* Estilizando os botões */
+button {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  padding: 3px 3px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Alterando a cor do botão quando o mouse passa por cima */
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilizando o botão de adicionar */
+.add-button {
+  background-color: #008CBA; /* Azul */
+}
+
+/* Alterando a cor do botão de adicionar quando o mouse passa por cima */
+.add-button:hover {
+  background-color: #005f7f;
+}
+
+.btnEditar{
+  margin-right: 2px;
+}

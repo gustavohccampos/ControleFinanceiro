@@ -11,6 +11,14 @@ import { DespesaFormComponent } from './componentes/despesa-form/despesa-form.co
 import { FormsModule } from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms'
 
+// Moedas Formato BRL**************************************************
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID} from '@angular/core';
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(ptBr);
+// **************************************************
+
 
 @NgModule({
   declarations: [
@@ -26,7 +34,12 @@ import {ReactiveFormsModule} from '@angular/forms'
   exports:[
   ]
   ,
-  providers: [],
+  providers: [
+        // MOEDA BRL ************************************
+        { provide: LOCALE_ID, useValue: 'pt-BR' },
+        { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
+        // ************************************
+  ],
 
   bootstrap: [AppComponent]
 })
