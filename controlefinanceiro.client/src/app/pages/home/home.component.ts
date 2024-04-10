@@ -23,16 +23,16 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.despesasService.GetDespesas().subscribe(dadosApi =>{
-      console.log(dadosApi)
+     // console.log(dadosApi)
 
       dadosApi.map((item) =>
       {
-        console.log(item)
+       // console.log(item)
 
         item.dataCadastro = new Date(item.dataCadastro!).toLocaleDateString('pt-BR')
         item.vencimento = new Date(item.vencimento!).toLocaleDateString('pt-BR')
 
-        console.log(dadosApi)
+       // console.log(dadosApi)
       })
 
       this.despesas = dadosApi;

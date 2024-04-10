@@ -15,6 +15,7 @@ import {ReactiveFormsModule} from '@angular/forms'
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID} from '@angular/core';
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { EditarDespesaComponent } from './pages/editar-despesa/editar-despesa.component';
 
 registerLocaleData(ptBr);
 // **************************************************
@@ -25,7 +26,8 @@ registerLocaleData(ptBr);
     AppComponent,
     HomeComponent,
     CadastroDespesaComponent,
-    DespesaFormComponent
+    DespesaFormComponent,
+    EditarDespesaComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, AppRoutingModule,

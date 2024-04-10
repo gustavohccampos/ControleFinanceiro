@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroDespesaComponent } from './pages/cadastro-despesa/cadastro-despesa.component';
 import { HomeComponent } from './pages/home/home.component';
+import { EditarDespesaComponent } from './pages/editar-despesa/editar-despesa.component';
 
 const routes: Routes =[
   {path:'cadastroDespesa', component:CadastroDespesaComponent},
-  {path:'', component:HomeComponent}
+  {path:'', component:HomeComponent},
+  {path:'editarDespesa/:id', component:EditarDespesaComponent}
 ];
 
 

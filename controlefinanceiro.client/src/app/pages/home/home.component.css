@@ -46,7 +46,7 @@ table {
 /* Estilizando o cabeçalho da tabela */
 th, td {
   padding: 3px;
-  text-align: left;
+  text-align: center;
   border-bottom: 1px solid #000000;
 }
 tr{
@@ -73,17 +73,7 @@ button {
 
 /* Alterando a cor do botão quando o mouse passa por cima */
 button:hover {
-  background-color: #45a049;
-}
-
-/* Estilizando o botão de adicionar */
-.add-button {
-  background-color: #008CBA; /* Azul */
-}
-
-/* Alterando a cor do botão de adicionar quando o mouse passa por cima */
-.add-button:hover {
-  background-color: #005f7f;
+  background-color: #2a632c;
 }
 
 .btnEditar{

@@ -1,4 +1,4 @@
-<h3>Cadastro de uma Nova Despesa</h3>
+<h3>{{btnTitulo}}</h3>
 
 <form [formGroup]="despesaForm" (ngSubmit)="submit()" #forDit="ngForm">
 
@@ -40,16 +40,18 @@
   <div class="input_box">
     <label for="">TipoCategoriaId</label>
     <select formControlName="tipoCategoriaId" id="tipoCategoriaId" required>
-      <option value="2">teste</option>
-      <option value="2">teste2</option>
+      <option value="1">Categoria 1</option>
+      <option value="2">Categoria 2</option>
+      <option value="3">Categoria 3</option>
     </select>
   </div>
 
   <div class="input_box">
     <label for="">TipoPagamentoId</label>
     <select formControlName="tipoPagamentoId" id="tipoPagamentoId" required>
-      <option value="2">teste</option>
-      <option value="2">teste2</option>
+      <option value="1">Pagamento 1</option>
+      <option value="2">Pagamento 2</option>
+      <option value="3">Pagamento 3</option>
     </select>
   </div>
 
@@ -63,8 +65,8 @@
   </div>
 
   <div class="btn-box">
-    <button type="submit">Cadastrar</button>
-    <button>Voltar</button>
+    <button type="submit" [disabled]="!despesaForm.valid">{{btnAcao}}</button>
+    <button routerLink="">Voltar</button>
   </div>
 
 </form>

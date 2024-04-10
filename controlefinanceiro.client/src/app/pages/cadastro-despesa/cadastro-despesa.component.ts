@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Despesas } from 'src/app/models/Despesas';
 import { DespesasService } from 'src/app/services/despesas.service';
 
@@ -8,8 +9,10 @@ import { DespesasService } from 'src/app/services/despesas.service';
   styleUrls: ['./cadastro-despesa.component.css']
 })
 export class CadastroDespesaComponent {
+  btnAcao = "Cadastrar";
+  btnTitulo = "Cadastrar Despesa";
 
-constructor (private despesaService : DespesasService)
+constructor (private despesaService : DespesasService, private router: Router)
 {
 
 }
@@ -17,7 +20,8 @@ constructor (private despesaService : DespesasService)
 
 createDespesa(despesa: Despesas){
   this.despesaService.PostDespesa(despesa).subscribe((data) => {
-    console.log(data)
+    //console.log(data)
+    this.router.navigate(['/']);
   })
 }
 

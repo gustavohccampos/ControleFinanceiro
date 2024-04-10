@@ -20,6 +20,11 @@ export class DespesasService {
       return this.http.get<Despesas[]>(this.apiUrl)
   }
 
+  GetDespesaId(id :number) : Observable<Despesas>
+  {
+      return this.http.get<Despesas>(`${this.apiUrl}/${id}`);
+  }
+
   PostDespesa(despesa: Despesas) : Observable<Despesas[]> {
     return this.http.post<Despesas[]>(`${this.apiUrl}`, despesa);
   }
