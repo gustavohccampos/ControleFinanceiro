@@ -29,5 +29,9 @@ export class DespesasService {
     return this.http.post<Despesas[]>(`${this.apiUrl}`, despesa);
   }
 
+  PutDespesa(id :number,despesa: Despesas) : Observable<Despesas[]> {
+    return this.http.put<Despesas[]>(`${this.apiUrl}/${id}`, despesa);
+  }
+
 
 }

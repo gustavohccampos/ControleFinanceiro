@@ -16,6 +16,7 @@ import { DEFAULT_CURRENCY_CODE, LOCALE_ID} from '@angular/core';
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { EditarDespesaComponent } from './pages/editar-despesa/editar-despesa.component';
+import { DetalhesDespesaComponent } from './pages/detalhes-despesa/detalhes-despesa.component';
 
 registerLocaleData(ptBr);
 // **************************************************
@@ -27,7 +28,8 @@ registerLocaleData(ptBr);
     HomeComponent,
     CadastroDespesaComponent,
     DespesaFormComponent,
-    EditarDespesaComponent
+    EditarDespesaComponent,
+    DetalhesDespesaComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, AppRoutingModule,

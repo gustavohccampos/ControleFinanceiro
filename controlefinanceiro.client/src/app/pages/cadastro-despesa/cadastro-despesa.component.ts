@@ -20,7 +20,7 @@ constructor (private despesaService : DespesasService, private router: Router)
 
 createDespesa(despesa: Despesas){
   this.despesaService.PostDespesa(despesa).subscribe((data) => {
-    //console.log(data)
+    console.log(data)
     this.router.navigate(['/']);
   })
 }

@@ -1,3 +1,4 @@
 <div *ngIf="despesa">
-  <app-despesa-form [btnAcao]="btnAcao" [btnTitulo]="btnTitulo" [dadosDespesa]="despesa"></app-despesa-form>
+  <app-despesa-form [btnAcao]="btnAcao" [btnTitulo]="btnTitulo" [dadosDespesa]="despesa"
+    (onSubmit)="editarDespesa($event)"></app-despesa-form>
 </div>

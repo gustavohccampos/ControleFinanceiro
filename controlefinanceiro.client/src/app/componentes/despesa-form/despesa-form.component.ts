@@ -26,7 +26,7 @@ export class DespesaFormComponent implements OnInit {
     console.log(this.dadosDespesa)
 
     this.despesaForm = new FormGroup({
-        id:new FormControl(0),
+        id:new FormControl(this.dadosDespesa ? this.dadosDespesa.id:0),
         nome:new FormControl(this.dadosDespesa ? this.dadosDespesa.nome:'',[Validators.required]),
         descricao:new FormControl(this.dadosDespesa ? this.dadosDespesa.descricao:''),
         valor:new FormControl(this.dadosDespesa ? this.dadosDespesa.valor:'',[Validators.required]),

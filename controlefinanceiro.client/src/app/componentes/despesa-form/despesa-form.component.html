@@ -1,6 +1,7 @@
 <h3>{{btnTitulo}}</h3>
 
 <form [formGroup]="despesaForm" (ngSubmit)="submit()" #forDit="ngForm">
+  <input type="hidden" formControlName="id">
 
   <div class="input_box">
     <label for="">Nome</label>
@@ -57,12 +58,13 @@
 
   <div class="input_box">
     <label for="">DataCadastro</label>
-    <input type="text" formControlName="dataCadastro" placeholder="">
+    <input type="text" formControlName="dataCadastro">
   </div>
   <div class="input_box">
     <label for="">DataAlteracao</label>
-    <input type="text" formControlName="dataAlteracao" placeholder="">
+    <input type="text" formControlName="dataAlteracao">
   </div>
+
 
   <div class="btn-box">
     <button type="submit" [disabled]="!despesaForm.valid">{{btnAcao}}</button>
