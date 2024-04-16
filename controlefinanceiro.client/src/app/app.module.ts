@@ -28,6 +28,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSelectModule} from '@angular/material/select';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ExcluirDespesaComponent } from './componentes/excluir-despesa/excluir-despesa.component';
 // **************************************************
 
 
@@ -38,13 +41,15 @@ import {MatNativeDateModule} from '@angular/material/core';
     CadastroDespesaComponent,
     DespesaFormComponent,
     EditarDespesaComponent,
-    DetalhesDespesaComponent
+    DetalhesDespesaComponent,
+    ExcluirDespesaComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, AppRoutingModule,
     FormsModule,ReactiveFormsModule, BrowserAnimationsModule,
     MatButtonModule,MatCardModule, MatInputModule,MatCheckboxModule,
-    MatDatepickerModule,MatSelectModule,MatNativeDateModule
+    MatDatepickerModule,MatSelectModule,MatNativeDateModule,
+    MatTableModule,MatDialogModule
   ],
   exports:[
   ]

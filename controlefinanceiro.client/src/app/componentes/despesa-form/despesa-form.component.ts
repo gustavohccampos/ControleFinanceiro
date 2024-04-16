@@ -36,8 +36,8 @@ export class DespesaFormComponent implements OnInit {
         usuarioId:new FormControl(this.dadosDespesa ? this.dadosDespesa.usuarioId:'',[Validators.required]),
         tipoCategoriaId:new FormControl(this.dadosDespesa ? this.dadosDespesa.tipoCategoriaId:'',[Validators.required]),
         tipoPagamentoId:new FormControl(this.dadosDespesa ? this.dadosDespesa.tipoPagamentoId:'',[Validators.required]),
-        dataCadastro:new FormControl(new Date()),
-        dataAlteracao:new FormControl(new Date())
+        dataCadastro:new FormControl(this.dadosDespesa ? this.dadosDespesa.dataCadastro:new Date()),
+        dataAlteracao:new FormControl(this.dadosDespesa ? this.dadosDespesa.dataAlteracao:new Date()),
     });
   }
 

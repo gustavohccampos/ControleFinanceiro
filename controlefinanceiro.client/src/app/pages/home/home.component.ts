@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ExcluirDespesaComponent } from 'src/app/componentes/excluir-despesa/excluir-despesa.component';
 import { Despesas } from 'src/app/models/Despesas';
 import { DespesasService } from 'src/app/services/despesas.service';
 
@@ -16,7 +18,7 @@ export class HomeComponent implements OnInit {
   despesas:Despesas[] = [];
   despesasGeral: Despesas[] = [];
 
-  constructor(private despesasService:DespesasService)
+  constructor(private despesasService:DespesasService, public matDialog: MatDialog)
   {
 
   }
@@ -52,5 +54,17 @@ export class HomeComponent implements OnInit {
   })
 
   }
+
+
+  openDialog(id : number){
+    this.matDialog.open(ExcluirDespesaComponent,{
+      width: '350px',
+      height: '350px',
+      data: {
+        id: id
+      }
+    })
+  }
+
 }
 

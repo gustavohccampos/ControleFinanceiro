@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Deseja Confirmar a Exclusão da Despesa?</h1>
+  <div class="info">
+    <div class="info-item">
+      <label>ID:</label>
+      <p>{{despesa.id}}</p>
+    </div>
+    <div class="info-item">
+      <label>Despesa:</label>
+      <p>{{despesa.nome}}</p>
+    </div>
+    <div class="info-item">
+      <label>Valor:</label>
+      <p>{{despesa.valor}}</p>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button mat-raised-button color="warn" (click)="Excluir()">Confirmar Exclusão</button>
+    <button mat-raised-button (click)="Cancelar()">Cancelar</button>
+  </div>
+</div>

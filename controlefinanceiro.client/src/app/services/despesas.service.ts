@@ -33,5 +33,10 @@ export class DespesasService {
     return this.http.put<Despesas[]>(`${this.apiUrl}/${id}`, despesa);
   }
 
+  DeleteDespesa(id :number) : Observable<Despesas[]> {
+    return this.http.delete<Despesas[]>(`${this.apiUrl}/${id}`);
+  }
+
+
 
 }

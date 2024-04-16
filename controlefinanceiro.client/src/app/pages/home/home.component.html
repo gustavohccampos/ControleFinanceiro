@@ -1,9 +1,10 @@
 <div class="despesa-box">
   <button routerLink="cadastroDespesa"> Cadastrar Nova Despesa</button>
-  <div class="input-box">
-    <label for="">Procurar</label>
-    <input type="text" placeholder="Despesa a procurar" (input)="search($event)">
-  </div>
+</div>
+
+<div class="search-box">
+  <label for="">Procurar</label>
+  <input type="text" placeholder="Despesa a procurar" (input)="search($event)">
 </div>
 
 <table class="table">
@@ -47,12 +48,13 @@
       <td>{{despesa.tipoCategoriaId}}</td>
       <td>{{despesa.tipoPagamentoId}}</td>
       <td>{{despesa.dataCadastro}}</td>
+
+      <td> <button routerLink="/editarDespesa/{{despesa.id}}" class="btnEditar">EDITAR</button></td>
       <td>
-        <button routerLink="/editarDespesa/{{despesa.id}}" class="btnEditar">EDITAR</button>
         <button routerLink="/detalhesDespesa/{{despesa.id}}" class="btnDetalhes">DETALHES</button>
       </td>
       <td>
-        <button>EXCLUIR</button>
+        <button class="btnExcluir" (click)="openDialog(despesa.id!)">EXCLUIR</button>
       </td>
 
     </tr>

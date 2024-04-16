@@ -50,43 +50,43 @@
       </div>
 
       <div class="input_box">
-        <mat-label>UsuarioID</mat-label>
-        <mat-select formControlName="usuarioId" id="usuarioId" required>
-          <mat-option value="4">4</mat-option>
-          <mat-option value="5">5</mat-option>
-        </mat-select>
+        <label>UsuarioID</label>
+        <select formControlName="usuarioId" id="usuarioId" required>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
       </div>
 
 
       <div class="input_box">
-        <mat-label>TipoCategoriaId</mat-label>
-        <mat-select disableRipple formControlName="tipoCategoriaId" id="tipoCategoriaId" required>
-          <mat-option value="1">Categoria 1</mat-option>
-          <mat-option value="2">Categoria 2</mat-option>
-          <mat-option value="3">Categoria 3</mat-option>
-        </mat-select>
+        <label>TipoCategoriaId</label>
+        <select disableRipple formControlName="tipoCategoriaId" id="tipoCategoriaId" required>
+          <option value="1">Categoria 1</option>
+          <option value="2">Categoria 2</option>
+          <option value="3">Categoria 3</option>
+        </select>
 
       </div>
 
       <div class="input_box">
-        <mat-label for="">TipoPagamentoId</mat-label>
-        <mat-select formControlName="tipoPagamentoId" id="tipoPagamentoId" required>
-          <mat-option value="1">Pagamento 1</mat-option>
-          <mat-option value="2">Pagamento 2</mat-option>
-          <mat-option value="3">Pagamento 3</mat-option>
-        </mat-select>
+        <label for="">TipoPagamentoId</label>
+        <select formControlName="tipoPagamentoId" id="tipoPagamentoId" required>
+          <option value="1">Pagamento 1</option>
+          <option value="2">Pagamento 2</option>
+          <option value="3">Pagamento 3</option>
+        </select>
       </div>
 
-      <div class="input_box">
+      <div class="input_box" hidden>
         <mat-form-field class="example-form-field">
           <mat-label>DataCadastro</mat-label>
-          <input matInput type="text" formControlName="dataCadastro" placeholder="Insira uma descrição" [hidden]="">
+          <input matInput type="text" formControlName="dataCadastro">
         </mat-form-field>
       </div>
-      <div class="input_box">
+      <div class="input_box" hidden>
         <mat-form-field class="example-form-field">
           <mat-label>DataAlteracao</mat-label>
-          <input matInput type="text" formControlName="dataAlteracao" placeholder="Insira uma descrição" [hidden]="">
+          <input matInput type="text" formControlName="dataAlteracao">
         </mat-form-field>
       </div>
 

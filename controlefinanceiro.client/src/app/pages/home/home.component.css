@@ -1,81 +1,79 @@
-/* Estilizando o corpo da página */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-
-}
-
-/* Estilizando o cabeçalho */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-}
-
-/* Estilizando o título */
-h1 {
-  margin: 0;
-}
-
-/* Estilizando a área de exibição dos dados */
-.data-display {
+.container {
   margin: 20px;
 }
 
-.despesa-box button{
-  margin-bottom: 10px;
+.despesa-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.despesa-box input{
-  margin-bottom: 10px;
-  width: 200px;
-  height: 20px;
-  font-weight: bold;
+.input-box {
+  width: 300px;
 }
 
-/* Estilizando a tabela */
+
+
 table {
-  width: 80%;
-  margin: 0 auto;
+  width: 90%;
   border-collapse: collapse;
-  border: 1px solid #000000;
+  align-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+
 }
 
-/* Estilizando o cabeçalho da tabela */
 th, td {
-  padding: 3px;
-  text-align: center;
-  border-bottom: 1px solid #000000;
-}
-tr{
-  border-bottom: 1px solid #000000;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
 
-/* Estilizando as linhas alternadas da tabela */
+th {
+  background-color: #f2f2f2;
+}
+
 tr:nth-child(even) {
   background-color: #f2f2f2;
-  border-bottom: 1px solid #000000;
 }
 
-/* Estilizando os botões */
+tr:hover {
+  background-color: #ddd;
+}
+
 button {
-  background-color: #4CAF50; /* Verde */
-  color: white;
-  padding: 3px 3px;
-  border: none;
   cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
   border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Alterando a cor do botão quando o mouse passa por cima */
 button:hover {
-  background-color: #2a632c;
+  background-color: #313335;
 }
 
-.btnEditar{
-  margin-right: 2px;
+button:active {
+  background-color: #313335;
 }
+
+
+.search-box input
+{
+  width: 25%;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+
+.btnExcluir
+{
+  background-color: #a11111;
+}
+
+.btnDetalhes{
+  background-color: #0e5852;
+}
+

@@ -1,78 +1,72 @@
 <h3>{{btnTitulo}}</h3>
 
-
 <div *ngIf="despesa">
-  <form>
-    <div class="input_box">
-      <label for="">ID </label>
-      <input type="text" value="{{despesa.id}}" disabled>
-    </div>
-    <div class="input_box">
-      <label for="">Nome</label>
-      <input type="text" value="{{despesa.nome}}" disabled>
+  <form class="form-container">
+    <mat-form-field class="input-box">
+      <mat-label>ID</mat-label>
+      <input matInput type="text" value="{{despesa.id}}" disabled>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field class="input-box">
+      <mat-label>Nome</mat-label>
+      <input matInput type="text" value="{{despesa.nome}}" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="input-box">
+      <mat-label>Descrição</mat-label>
+      <input matInput type="text" value="{{despesa.descricao}}" disabled>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field class="input-box">
+      <mat-label>Valor</mat-label>
+      <input matInput type="text" value="{{despesa.valor}}" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="input-box">
+      <mat-label>Vencimento</mat-label>
+      <input matInput type="text" value="{{despesa.vencimento}}" disabled>
+    </mat-form-field>
+
+    <br>
+    <mat-checkbox [checked]="despesa.repetirMensal" disabled>Recorrente</mat-checkbox>
+
+    <mat-checkbox [checked]="despesa.paga" disabled>Paga</mat-checkbox>
+
+    <div>
+      <br>
     </div>
 
-    <div class="input_box">
-      <label for="">Descrição</label>
-      <input type="text" value="{{despesa.descricao}}" disabled>
-    </div>
+    <mat-form-field class="input-box">
+      <mat-label>UsuarioID</mat-label>
+      <input matInput type="text" value="{{despesa.usuarioId}}" disabled>
+    </mat-form-field>
 
-    <div class="input_box">
-      <label for="">Valor</label>
-      <input type="text" value="{{despesa.valor}}" disabled>
-    </div>
+    <mat-form-field class="input-box">
+      <mat-label>TipoCategoriaId</mat-label>
+      <input matInput type="text" value="{{despesa.tipoCategoriaId}}" disabled>
+    </mat-form-field>
 
-    <div class="input_box">
-      <label for="">Vencimento</label>
-      <input type="text" value="{{despesa.vencimento}}" disabled>
-    </div>
+    <mat-form-field class="input-box">
+      <mat-label>TipoPagamentoId</mat-label>
+      <input matInput type="text" value="{{despesa.tipoPagamentoId}}" disabled>
+    </mat-form-field>
 
-    <div class="input_box">
-      <label for="">Recorrente</label>
-      <input type="checkbox" [checked]="despesa.repetirMensal" disabled>
-    </div>
 
-    <div class="input_box">
-      <label for="">Paga</label>
-      <input type="checkbox" [checked]="despesa.paga" disabled>
-    </div>
+    <mat-form-field class="input-box">
+      <mat-label>DataCadastro</mat-label>
+      <input matInput type="text" value="{{despesa.dataCadastro}}" disabled>
+    </mat-form-field>
 
-    <div class="input_box">
-      <label for="">UsuarioID</label>
-      <input type="text" value="{{despesa.usuarioId}}" disabled>
-    </div>
-
-    <div class="input_box">
-      <label for="">TipoCategoriaId</label>
-      <select value="{{despesa.tipoCategoriaId}}" id="tipoCategoriaId" disabled>
-        <option value="1">Categoria 1</option>
-        <option value="2">Categoria 2</option>
-        <option value="3">Categoria 3</option>
-      </select>
-    </div>
-
-    <div class="input_box">
-      <label for="">TipoPagamentoId</label>
-      <select value="{{despesa.tipoPagamentoId}}" id="tipoPagamentoId" disabled>
-        <option value="1">Pagamento 1</option>
-        <option value="2">Pagamento 2</option>
-        <option value="3">Pagamento 3</option>
-      </select>
-    </div>
-
-    <div class="input_box">
-      <label for="">DataCadastro</label>
-      <input type="text" value="{{despesa.dataCadastro}}" disabled>
-    </div>
-    <div class="input_box">
-      <label for="">DataAlteracao</label>
-      <input type="text" value="{{despesa.dataAlteracao}}" disabled>
-    </div>
+    <mat-form-field class="input-box">
+      <mat-label>DataAlteracao</mat-label>
+      <input matInput type="text" value="{{despesa.dataAlteracao}}" disabled>
+    </mat-form-field>
 
     <div class="btn-box">
-      <button type="submit" [disabled]="">Inativar</button>
-      <button routerLink="">Voltar</button>
+      <button mat-button routerLink="">Voltar</button>
     </div>
-
   </form>
 </div>

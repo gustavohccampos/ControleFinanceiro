@@ -13,6 +13,8 @@ OnInit{
   btnAcao = "Editar";
   btnTitulo = "Editar Despesa";
   despesa!: Despesas;
+  dataCad= Date();
+  dataAlt = Date.now;
 
   constructor (private despesaService : DespesasService, private route: ActivatedRoute, private router:Router)
   {
@@ -25,12 +27,17 @@ OnInit{
     this.despesaService.GetDespesaId(id).subscribe((data) => {
       //console.log(data);
       this.despesa = data;
+      this.dataCad = data.dataCadastro;
 
     })
   }
 
   editarDespesa(despesa : Despesas)
   {
+    despesa.dataCadastro = this.dataCad;
+    despesa.dataAlteracao =new Date().toISOString();
+
+    console.log(despesa);
     const id = Number(this.route.snapshot.paramMap.get('id'));
       this.despesaService.PutDespesa(id,despesa).subscribe(data=>{
        // console.log(despesa);
