@@ -1,14 +1,16 @@
+Este projeto esta sendo Desenvolvido para aprendizado.
+
+Estou atualizando os prints a medida que estou realizando as alterações, quando o projeto estiver finalizado, a pagina será atualizada com o projeto final.
+
+Uma aplicação simples de Controle de Despesas utilizando o .NET CORE webAPI com Entity Framework Core,SQLite,Angular
+
 Ultima atualização(aplicado elementos do Angular Material, finalizado a Criação, Edição e Exclusão de dados no Front):
 ![image](https://github.com/gustavohccampos/ControleFinanceiro/assets/53590418/ecfd2663-26fb-4f90-9bc7-45f85a8d7930)
 
 ![image](https://github.com/gustavohccampos/ControleFinanceiro/assets/53590418/50c0f5e3-cf09-4abb-82cb-84119e352e3a)
 
 
-Este projeto esta sendo Desenvolvido para aprendizado.
 
-Estou atualizando os prints a medida que estou realizando as alterações, quando o projeto estiver finalizado, a pagina será atualizada com o projeto final.
-
-Uma aplicação simples de Controle de Despesas utilizando o .NET CORE webAPI com Entity Framework Core,SQLite,Angular
 
 Interface do Swagger ja realizando as requisições corretamente dos metodos a serem utilizado:
 ![image](https://github.com/gustavohccampos/ControleFinanceiro/assets/53590418/36756373-a8c8-4cde-ab5f-855f8da7bc49)
