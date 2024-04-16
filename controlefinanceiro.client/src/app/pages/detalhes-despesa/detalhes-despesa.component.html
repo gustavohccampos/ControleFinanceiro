@@ -4,6 +4,10 @@
 <div *ngIf="despesa">
   <form>
     <div class="input_box">
+      <label for="">ID </label>
+      <input type="text" value="{{despesa.id}}" disabled>
+    </div>
+    <div class="input_box">
       <label for="">Nome</label>
       <input type="text" value="{{despesa.nome}}" disabled>
     </div>

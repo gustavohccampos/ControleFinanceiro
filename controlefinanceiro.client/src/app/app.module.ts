@@ -17,8 +17,17 @@ import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { EditarDespesaComponent } from './pages/editar-despesa/editar-despesa.component';
 import { DetalhesDespesaComponent } from './pages/detalhes-despesa/detalhes-despesa.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 registerLocaleData(ptBr);
+// *******Angular Material********************************
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSelectModule} from '@angular/material/select';
+import {MatNativeDateModule} from '@angular/material/core';
 // **************************************************
 
 
@@ -33,7 +42,9 @@ registerLocaleData(ptBr);
   ],
   imports: [
     BrowserModule, HttpClientModule, AppRoutingModule,
-    FormsModule,ReactiveFormsModule
+    FormsModule,ReactiveFormsModule, BrowserAnimationsModule,
+    MatButtonModule,MatCardModule, MatInputModule,MatCheckboxModule,
+    MatDatepickerModule,MatSelectModule,MatNativeDateModule
   ],
   exports:[
   ]

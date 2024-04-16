@@ -1,74 +1,101 @@
 <h3>{{btnTitulo}}</h3>
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="despesaForm" (ngSubmit)="submit()" #forDit="ngForm">
+      <input type="hidden" formControlName="id">
 
-<form [formGroup]="despesaForm" (ngSubmit)="submit()" #forDit="ngForm">
-  <input type="hidden" formControlName="id">
+      <div class="input_box">
+        <mat-form-field class="example-form-field">
+          <mat-label>Nome</mat-label>
+          <input matInput type="text" formControlName="nome" placeholder="Insira o nome da Despesa!" required>
+        </mat-form-field>
+      </div>
 
-  <div class="input_box">
-    <label for="">Nome</label>
-    <input type="text" formControlName="nome" placeholder="Insira o nome da Despesa!" required>
-  </div>
+      <div class="input_box">
+        <mat-form-field class="example-form-field">
+          <mat-label>Descrição</mat-label>
+          <input matInput type="text" formControlName="descricao" placeholder="Insira uma descrição" required>
+        </mat-form-field>
+      </div>
 
-  <div class="input_box">
-    <label for="">Descrição</label>
-    <input type="text" formControlName="descricao" placeholder="Descrição da Despesa">
-  </div>
+      <div class="input_box">
+        <mat-form-field class="example-form-field">
+          <mat-label>Valor</mat-label>
+          <input matInput type="text" formControlName="valor" placeholder="Insira o Valor da Despesa!" required>
+        </mat-form-field>
+      </div>
 
-  <div class="input_box">
-    <label for="">Valor</label>
-    <input type="text" formControlName="valor" placeholder="Valor" required>
-  </div>
+      <div class="input_box">
 
-  <div class="input_box">
-    <label for="">Vencimento</label>
-    <input type="text" formControlName="vencimento" placeholder="">
-  </div>
+        <mat-form-field>
+          <mat-label>Vencimento</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="vencimento" required>
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
 
-  <div class="input_box">
-    <label for="">Recorrente</label>
-    <input type="checkbox" formControlName="repetirMensal" placeholder="Recorrente">
-  </div>
+      <div class="input_box">
+        <section class="example-section">
+          <mat-checkbox class="example-margin" formControlName="repetirMensal">Recorrente?</mat-checkbox>
+          <!--  <mat-checkbox class="example-margin" [disabled]="true">Disabled</mat-checkbox>-->
+        </section>
+      </div>
 
-  <div class="input_box">
-    <label for="">Paga</label>
-    <input type="checkbox" formControlName="paga" placeholder="">
-  </div>
+      <div class="input_box">
+        <section class="example-section">
+          <mat-checkbox class="example-margin" formControlName="paga">Paga?</mat-checkbox>
+        </section>
+      </div>
 
-  <div class="input_box">
-    <label for="">UsuarioID</label>
-    <input type="text" formControlName="usuarioId" placeholder="">
-  </div>
-
-  <div class="input_box">
-    <label for="">TipoCategoriaId</label>
-    <select formControlName="tipoCategoriaId" id="tipoCategoriaId" required>
-      <option value="1">Categoria 1</option>
-      <option value="2">Categoria 2</option>
-      <option value="3">Categoria 3</option>
-    </select>
-  </div>
-
-  <div class="input_box">
-    <label for="">TipoPagamentoId</label>
-    <select formControlName="tipoPagamentoId" id="tipoPagamentoId" required>
-      <option value="1">Pagamento 1</option>
-      <option value="2">Pagamento 2</option>
-      <option value="3">Pagamento 3</option>
-    </select>
-  </div>
-
-  <div class="input_box">
-    <label for="">DataCadastro</label>
-    <input type="text" formControlName="dataCadastro">
-  </div>
-  <div class="input_box">
-    <label for="">DataAlteracao</label>
-    <input type="text" formControlName="dataAlteracao">
-  </div>
+      <div class="input_box">
+        <mat-label>UsuarioID</mat-label>
+        <mat-select formControlName="usuarioId" id="usuarioId" required>
+          <mat-option value="4">4</mat-option>
+          <mat-option value="5">5</mat-option>
+        </mat-select>
+      </div>
 
 
-  <div class="btn-box">
-    <button type="submit" [disabled]="!despesaForm.valid">{{btnAcao}}</button>
-    <button routerLink="">Voltar</button>
-  </div>
+      <div class="input_box">
+        <mat-label>TipoCategoriaId</mat-label>
+        <mat-select disableRipple formControlName="tipoCategoriaId" id="tipoCategoriaId" required>
+          <mat-option value="1">Categoria 1</mat-option>
+          <mat-option value="2">Categoria 2</mat-option>
+          <mat-option value="3">Categoria 3</mat-option>
+        </mat-select>
 
-</form>
+      </div>
+
+      <div class="input_box">
+        <mat-label for="">TipoPagamentoId</mat-label>
+        <mat-select formControlName="tipoPagamentoId" id="tipoPagamentoId" required>
+          <mat-option value="1">Pagamento 1</mat-option>
+          <mat-option value="2">Pagamento 2</mat-option>
+          <mat-option value="3">Pagamento 3</mat-option>
+        </mat-select>
+      </div>
+
+      <div class="input_box">
+        <mat-form-field class="example-form-field">
+          <mat-label>DataCadastro</mat-label>
+          <input matInput type="text" formControlName="dataCadastro" placeholder="Insira uma descrição" [hidden]="">
+        </mat-form-field>
+      </div>
+      <div class="input_box">
+        <mat-form-field class="example-form-field">
+          <mat-label>DataAlteracao</mat-label>
+          <input matInput type="text" formControlName="dataAlteracao" placeholder="Insira uma descrição" [hidden]="">
+        </mat-form-field>
+      </div>
+
+
+      <div class="btn-box">
+        <button mat-raised-button color="primary" type="submit" [disabled]="!despesaForm.valid">{{btnAcao}}</button>
+        <button mat-button color="primary" routerLink="">Voltar</button>
+      </div>
+
+    </form>
+  </mat-card-content>
+</mat-card>
